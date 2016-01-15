@@ -1,0 +1,43 @@
+<resources>
+    <!-- Related to app -->
+    <string name="app_name">Popular Movies</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title_sort">Sort Order</string>
+    <string name="pref_key_sort">sort</string>
+    <string-array name="pref_sort_list_options">
+        <item>Most Popular</item>
+        <item>Highest Rated</item>
+    </string-array>
+    <string-array name="pref_sort_list_values">
+        <item>popularity</item>
+        <item>vote_average</item>
+    </string-array>
+    <string name="pref_sort_default">popularity</string>
+
+    <!-- Strings for detail view -->
+    <string name="movie_overview">overview</string>
+    <string name="movie_release_date">release_date</string>
+    <string name="movie_rating">rating</string>
+    <string name="movie_title">title</string>
+    <string name="movie_poster_url">poster_url</string>
+    <string name="movie_vote_average">vote_average</string>
+
+    <!-- Placeholder text -->
+    <string name="detail_view_overview_text">Overview goes here.</string>
+    <string name="detail_view_release_date_text">2005</string>
+    <string name="detail_view_title_text">Movie Title</string>
+    <string name="detail_view_vote_average_text">User Rating: 4.5/10</string>
+    <string name="movie_id">id</string>
+    <string name="movie_poster_size">poster_size</string>
+    <string name="no_date_set">No information available</string>
+    <string name="no_overview_set">No overview is available.</string>
+    <string name="vote_average">Average Rating</string>
+    <string name="no_title_set">No title available</string>
+    <string name="release_date_format">yyyy</string>
+    <string name="movie_key">movie</string>
+
+</resources>
