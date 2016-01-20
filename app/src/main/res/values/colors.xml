@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="imageBackground">#000000</color>
+    <color name="mainTextColor">#FFFFFF</color>
 </resources>

@@ -15,5 +15,15 @@
         tools:listitem="@layout/support_simple_spinner_dropdown_item"
         android:stretchMode="columnWidth"
         android:drawSelectorOnTop="true" />
+    <TextView
+        android:id="@+id/no_connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:text="@string/no_connection"
+        android:textColor="@color/mainTextColor"
+        android:textSize="@dimen/main_text_size"
+        android:visibility="invisible"
+        android:gravity="center" />
 
 </RelativeLayout>

@@ -39,5 +39,6 @@
     <string name="no_title_set">No title available</string>
     <string name="release_date_format">yyyy</string>
     <string name="movie_key">movie</string>
+    <string name="no_connection">No internet connection available.</string>
 
 </resources>
