@@ -1,6 +1,5 @@
 package com.wyattbarnes.popularmovies.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import butterknife.Bind;
-
 import com.squareup.picasso.Picasso;
 import com.wyattbarnes.popularmovies.R;
 import com.wyattbarnes.popularmovies.model.Movie;
@@ -18,23 +15,30 @@ import com.wyattbarnes.popularmovies.model.Movie;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * A placeholder fragment displaying detailed information about a movie.
  */
-public class DetailActivityFragment extends Fragment {
+public class DetailFragment extends Fragment {
     @Bind(R.id.detail_view_overview) TextView mOverviewView;
     @Bind(R.id.detail_view_vote_average) TextView mVoteAverageView;
     @Bind(R.id.detail_view_title) TextView mTitleView;
     @Bind(R.id.detail_view_release_date) TextView mReleaseDateView;
     @Bind(R.id.detail_view_poster) ImageView mPosterView;
 
-
-    public DetailActivityFragment() {
+    public DetailFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // Get root view
+        View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
+
+        // Bind views
+        ButterKnife.bind(this, rootView);
 
         // Get movie from intent
         Movie movie = (Movie) getActivity()
@@ -77,6 +81,6 @@ public class DetailActivityFragment extends Fragment {
                 .centerCrop()
                 .into(mPosterView);
 
-        return inflater.inflate(R.layout.fragment_detail, container, false);
+        return rootView;
     }
 }

@@ -34,9 +34,9 @@ public class FetchGalleryTask extends AsyncTask<String, Void, Movie[]> {
     private final String API_ID_PARAM = "api_key";
     private final String SORT_PARAM = "sort_by";
 
-    // TODO add API key
+    // TODO remove API key
     // Api key
-    private final String API_KEY = "ADD_API_KEY_HERE";
+    private final String API_KEY = "***REMOVED***";
 
     private Context mContext;
     private GalleryAdapter mGalleryAdapter;
@@ -65,6 +65,7 @@ public class FetchGalleryTask extends AsyncTask<String, Void, Movie[]> {
                 .appendQueryParameter(SORT_PARAM, params[0])
                 .appendQueryParameter(API_ID_PARAM, API_KEY)
                 .build();
+        Log.d(LOG_TAG, uri.toString());
 
         // Attempt request
         try {

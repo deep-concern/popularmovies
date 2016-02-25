@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 import com.wyattbarnes.popularmovies.R;
 import com.wyattbarnes.popularmovies.model.Movie;
