@@ -1,20 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Colors -->
+        <item name="colorPrimary">@color/appThemePrimary</item>
+        <item name="colorPrimaryDark">@color/appThemePrimaryDark</item>
+        <item name="colorAccent">@color/appThemeAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <!-- Main activity theme. -->
+    <style name="GalleryTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.PopularMovies</item>
+
+        <!-- Base Style -->
+        <item name="android:background">@color/appThemeBackground</item>
+        <item name="android:textColor">@color/appThemeText</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- Detail activity theme. -->
+    <style name="DetailTheme" parent="AppTheme">
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- Settings activity theme. -->
+    <style name="SettingsTheme" parent="AppTheme">
+    </style>
+
+    <!-- main activity action bar styles -->
+    <style name="ActionBar.Solid.PopularMovies" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">showHome</item>
+        <item name="title">@string/app_name</item>
+    </style>
+
+    <!-- Offline Status styles -->
+    <style name="OfflineBarStyle">
+        <item name="android:background">@color/noConnectionBackground</item>
+        <item name="android:textColor">@color/noConnectionText</item>
+    </style>
+
+    <style name="OfflineTextStyle">
+        <item name="android:textColor">@color/noConnectionText</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 
 </resources>

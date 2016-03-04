@@ -85,7 +85,7 @@ public class GalleryFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
 
         // Get root view
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         // Bind views
         ButterKnife.bind(this, rootView);
@@ -175,11 +175,6 @@ public class GalleryFragment extends Fragment {
     public void onPause() {
         super.onPause();
         getActivity().unregisterReceiver(mReceiver);
-
-        // Save movie list in preferences
-        SharedPreferences preferences = PreferenceManager
-                .getDefaultSharedPreferences(getContext());
-        SharedPreferences.Editor editor = preferences.edit();
     }
 
     private void updateGallery() {

@@ -1,42 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/imageBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.GalleryFragment"
-    tools:showIn="@layout/activity_main">
+    tools:context=".fragment.GalleryFragment">
     <TextView
         android:id="@+id/text_view_offline_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/noConnectionBackground"
         android:text="@string/offline"
-        android:textColor="@color/noConnectionText"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        style="@style/OfflineBarStyle"/>
     <GridView
         android:id="@+id/grid_view_gallery"
+        android:drawSelectorOnTop="true"
+        android:gravity="center_horizontal|top"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:numColumns="auto_fit"
-        android:gravity="center_horizontal|top"
-        tools:listitem="@layout/support_simple_spinner_dropdown_item"
-        android:stretchMode="columnWidth"
-        android:drawSelectorOnTop="true"
         android:layout_below="@+id/text_view_offline_bar"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        style="@style/GalleryTheme"
+        tools:listitem="@layout/grid_item_gallery" />
     <TextView
         android:id="@+id/text_view_no_connection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:text="@string/no_connection"
-        android:textColor="@color/noConnectionText"
-        android:textSize="@dimen/main_text_size"
         android:visibility="invisible"
         android:gravity="center"
         android:layout_below="@+id/text_view_offline_bar"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        style="@style/OfflineTextStyle"/>
 
 </RelativeLayout>

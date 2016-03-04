@@ -6,5 +6,5 @@
 
     <dimen name="poster_height">277dp</dimen>
     <dimen name="poster_width">185dp</dimen>
-    <dimen name="main_text_size">18dp</dimen>
+    <dimen name="main_text_size">18sp</dimen>
 </resources>

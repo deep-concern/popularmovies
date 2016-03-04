@@ -14,6 +14,7 @@ import com.wyattbarnes.popularmovies.model.Movie;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -67,7 +68,7 @@ public class DetailFragment extends Fragment {
         if (movie.releaseDate == null) {
             mReleaseDateView.setText(getString(R.string.no_date_set));
         } else {
-            DateFormat format = new SimpleDateFormat(getString(R.string.release_date_format));
+            DateFormat format = new SimpleDateFormat(getString(R.string.release_date_format), Locale.US);
             mReleaseDateView.setText(format.format(movie.releaseDate));
         }
 
